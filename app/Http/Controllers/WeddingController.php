@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Saying;
+use App\Models\Wedding;
 use Illuminate\Http\Request;
 
-class DashboardUcapanController extends Controller
+class WeddingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class DashboardUcapanController extends Controller
      */
     public function index()
     {
-        $data = Saying::all();
-        return view('dashboard.saying.index',compact('data'));
+        return view('dashboard.wedding.index');
     }
 
     /**
@@ -25,7 +24,7 @@ class DashboardUcapanController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.wedding.create');
     }
 
     /**
@@ -42,10 +41,10 @@ class DashboardUcapanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Saying  $saying
+     * @param  \App\Models\Wedding  $wedding
      * @return \Illuminate\Http\Response
      */
-    public function show(Saying $saying)
+    public function show(Wedding $wedding)
     {
         //
     }
@@ -53,10 +52,10 @@ class DashboardUcapanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Saying  $saying
+     * @param  \App\Models\Wedding  $wedding
      * @return \Illuminate\Http\Response
      */
-    public function edit(Saying $saying)
+    public function edit(Wedding $wedding)
     {
         //
     }
@@ -65,10 +64,10 @@ class DashboardUcapanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Saying  $saying
+     * @param  \App\Models\Wedding  $wedding
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Saying $saying)
+    public function update(Request $request, Wedding $wedding)
     {
         //
     }
@@ -76,11 +75,11 @@ class DashboardUcapanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Saying  $saying
+     * @param  \App\Models\Wedding  $wedding
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Saying $saying)
+    public function destroy(Wedding $wedding)
     {
-     
+        //
     }
 }

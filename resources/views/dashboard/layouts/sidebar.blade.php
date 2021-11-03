@@ -2,15 +2,15 @@
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">
+          <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="/dashboard">
             <span data-feather="home"></span>
             Dashboard
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link {{ Request::is('dashboard/wedding*') ? 'active' : '' }}" href="/dashboard/weddings">
             <span data-feather="file-text"></span>
-            Posting
+            Wedding
           </a>
         </li>
 
@@ -19,11 +19,24 @@
         </h6>
 
         <li class="nav-item">
-          <a class="nav-link" href="dashboard/ucapan ">
+          <a class="nav-link {{ Request::is('dashboard/invites*') ? 'active' : '' }}" href="/dashboard/invites">
             <span data-feather="list"></span>
-              Ucapan
+              Buat Daftar Undangan
           </a>
         </li>
+
+        <ul class="nav flex-colomn">
+          <li class="nav-item"> 
+            <a class="nav-link {{ Request::is('dashboard/ucapan*') ? 'active' : '' }}" href="/dashboard/ucapans">
+              <span data-feather="grid"></span>
+              Ucapan
+            </a>
+          </li>
+        </ul>
+
+  
+
+        
       </ul>
     </div>
   </nav>
